@@ -5,7 +5,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         boolean isCorrectName = false;
         while (!isCorrectName) {
-            String name = scanner.nextLine(); //Считывает строку из System.in
+            String name = scanner.nextLine();
             isCorrectName = checkName(name);
             if (!isCorrectName) {
                 System.out.println("Введите корректное имя!");
@@ -31,8 +31,8 @@ public class Main {
 
     private static String formatName(String name) {
         //Написать код здесь
-        String output = "";//все слова с заглавной буквы.
-        String[] words = name.split(" ");//разделяем на массив из слов
+        String output = "";
+        String[] words = name.split(" ");
         sortByLength(words);
         for (String word : words) {
             String first = word.substring(0, 1).toUpperCase();
